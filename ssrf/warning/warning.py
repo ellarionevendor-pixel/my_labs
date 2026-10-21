@@ -1,7 +1,7 @@
 import sys
 
 def Warning():
-    print("[WARNING] This program in studing porpouses only! (Type 'OK' if you realize that)")
+    print("[WARNING] This program in studying porpouses only! (Type 'OK' if you realize that)")
             
     Agreement = str(input("> "))
     if Agreement != "OK":
