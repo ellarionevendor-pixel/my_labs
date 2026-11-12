@@ -51,7 +51,7 @@ The payload first closes the existing option context and then injects an image e
 
 The resulting URL was:
 
-[Open the exploit URL](https://0adc00f803d84b3080970394008b00c2.web-security-academy.net/product?productId=4&storeId=%22%3E%3Cimg%20src=1%20onerror=alert(1)%3E)
+**https://0adc00f803d84b3080970394008b00c2.web-security-academy.net/product?productId=4&storeId=%22%3E%3Cimg%20src=1%20onerror=alert(1)%3E**
 
 ## Result
 
