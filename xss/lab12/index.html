@@ -1,0 +1,47 @@
+
+<!--
+    Lab 12 - Reflected DOM XSS
+    Local recreation for understanding eval() behavior
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eval Test</title>
+</head>
+
+<body>
+    <h1>Eval Test</h1>
+
+    <p id="page"></p>
+
+    <script>
+        var xmlHTTP = new XMLHttpRequest();
+        var url = "http://127.0.0.1:8000/data.json";
+
+        xmlHTTP.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.response);
+
+                // The response is received as a string.
+                // let myObject = this.response;
+                // console.log(myObject);
+
+                // Parse the response as JSON data.
+                // let myObject = JSON.parse(this.response);
+
+                // Dangerous: eval() interprets the response as JavaScript.
+                eval('var myObject = ' + this.response);
+
+                console.log(typeof myObject);
+
+                document.getElementById('page').innerText =
+                    myObject.information;
+            }
+        };
+
+        xmlHTTP.open('GET', url, true);
+        xmlHTTP.send();
+    </script>
+</body>
+</html>

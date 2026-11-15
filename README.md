@@ -14,7 +14,14 @@ This repository is where I track my progress in web security, document things I 
 ## ⚠️ Disclaimer
 
 This repository is for educational purposes and authorized security testing only.
+<<<<<<< HEAD
 
 All experiments are performed in PortSwigger Web Security Academy or other environments where testing is permitted.
 
 Please don't use these techniques against systems without authorization.
+=======
+
+All experiments are performed in PortSwigger Web Security Academy or other environments where testing is permitted.
+
+Please don't use these techniques against systems without authorization.
+>>>>>>> 278d3e6 (Lab 12 and 13)
