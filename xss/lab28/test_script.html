@@ -1,0 +1,23 @@
+<h2>Hello</h2>
+
+
+<script>
+/*
+function ranFunction(a, b){
+    return a + b;
+}
+
+// It doesn't throw any errors
+console.log(ranFunction(4, 5, 6))
+*/
+
+let ranVar = 1;
+function ranFunction(a, b){
+    return a + b;
+}
+
+
+// The variable is gonna be changed isnside the function, which even is not suppose to get third value
+console.log(ranFunction(4, 5, 6, ranVar=13));
+console.log(ranVar);
+</script>
